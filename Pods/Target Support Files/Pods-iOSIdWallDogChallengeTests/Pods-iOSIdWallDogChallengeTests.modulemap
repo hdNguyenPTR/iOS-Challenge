@@ -1,0 +1,6 @@
+framework module Pods_iOSIdWallDogChallengeTests {
+  umbrella header "Pods-iOSIdWallDogChallengeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

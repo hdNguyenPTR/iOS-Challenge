@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF278BCBCB8AF1E524F1E539 /* Pods_iOSIdWallDogChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE504B3ADE1CA295A98004A /* Pods_iOSIdWallDogChallengeTests.framework */; };
+		C57F7A59237F3575008153D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A58237F3575008153D9 /* AppDelegate.swift */; };
+		C57F7A5B237F3575008153D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A5A237F3575008153D9 /* ViewController.swift */; };
+		C57F7A5E237F3575008153D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A5C237F3575008153D9 /* Main.storyboard */; };
+		C57F7A60237F3576008153D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A5F237F3576008153D9 /* Assets.xcassets */; };
+		C57F7A63237F3576008153D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A61237F3576008153D9 /* LaunchScreen.storyboard */; };
+		C57F7A6E237F3576008153D9 /* iOSIdWallDogChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeTests.swift */; };
+		C57F7A82237F394E008153D9 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A7D237F394E008153D9 /* BaseService.swift */; };
+		C57F7A83237F394E008153D9 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A7E237F394E008153D9 /* ServiceError.swift */; };
+		C57F7A84237F394E008153D9 /* Response+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A7F237F394E008153D9 /* Response+Decode.swift */; };
+		C57F7A86237F3986008153D9 /* LoginApiDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A85237F3986008153D9 /* LoginApiDescriptor.swift */; };
+		C57F7A88237F3F65008153D9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A87237F3F65008153D9 /* LoginService.swift */; };
+		C57F7A8A237F3FB4008153D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A89237F3FB4008153D9 /* User.swift */; };
+		EC729BA2052AC7F1DAEB4094 /* Pods_iOSIdWallDogChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910C10D3590CEFB3844D00D0 /* Pods_iOSIdWallDogChallenge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C57F7A6A237F3576008153D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C57F7A4D237F3575008153D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C57F7A54237F3575008153D9;
+			remoteInfo = iOSIdWallDogChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4D1B7CE8E351C8C591121C12 /* Pods-iOSIdWallDogChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSIdWallDogChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-iOSIdWallDogChallengeTests/Pods-iOSIdWallDogChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8BE504B3ADE1CA295A98004A /* Pods_iOSIdWallDogChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSIdWallDogChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		910C10D3590CEFB3844D00D0 /* Pods_iOSIdWallDogChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSIdWallDogChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20133C7554B06DDDC1FD442 /* Pods-iOSIdWallDogChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSIdWallDogChallenge.release.xcconfig"; path = "Target Support Files/Pods-iOSIdWallDogChallenge/Pods-iOSIdWallDogChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		ADE8076F3677381A1C03D068 /* Pods-iOSIdWallDogChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSIdWallDogChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-iOSIdWallDogChallengeTests/Pods-iOSIdWallDogChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		C57F7A55237F3575008153D9 /* iOSIdWallDogChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSIdWallDogChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C57F7A58237F3575008153D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C57F7A5A237F3575008153D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C57F7A5D237F3575008153D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C57F7A5F237F3576008153D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C57F7A62237F3576008153D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C57F7A64237F3576008153D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57F7A69237F3576008153D9 /* iOSIdWallDogChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSIdWallDogChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSIdWallDogChallengeTests.swift; sourceTree = "<group>"; };
+		C57F7A6F237F3576008153D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57F7A7D237F394E008153D9 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		C57F7A7E237F394E008153D9 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		C57F7A7F237F394E008153D9 /* Response+Decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Decode.swift"; sourceTree = "<group>"; };
+		C57F7A85237F3986008153D9 /* LoginApiDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiDescriptor.swift; sourceTree = "<group>"; };
+		C57F7A87237F3F65008153D9 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		C57F7A89237F3FB4008153D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F39557259D34C945A9E43300 /* Pods-iOSIdWallDogChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSIdWallDogChallenge.debug.xcconfig"; path = "Target Support Files/Pods-iOSIdWallDogChallenge/Pods-iOSIdWallDogChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C57F7A52237F3575008153D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC729BA2052AC7F1DAEB4094 /* Pods_iOSIdWallDogChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57F7A66237F3576008153D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF278BCBCB8AF1E524F1E539 /* Pods_iOSIdWallDogChallengeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F4B46FA481CE0BECB87415C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F39557259D34C945A9E43300 /* Pods-iOSIdWallDogChallenge.debug.xcconfig */,
+				A20133C7554B06DDDC1FD442 /* Pods-iOSIdWallDogChallenge.release.xcconfig */,
+				4D1B7CE8E351C8C591121C12 /* Pods-iOSIdWallDogChallengeTests.debug.xcconfig */,
+				ADE8076F3677381A1C03D068 /* Pods-iOSIdWallDogChallengeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		707A3E1DA021296514CE3918 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				910C10D3590CEFB3844D00D0 /* Pods_iOSIdWallDogChallenge.framework */,
+				8BE504B3ADE1CA295A98004A /* Pods_iOSIdWallDogChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C57F7A4C237F3575008153D9 = {
+			isa = PBXGroup;
+			children = (
+				C57F7A57237F3575008153D9 /* iOSIdWallDogChallenge */,
+				C57F7A6C237F3576008153D9 /* iOSIdWallDogChallengeTests */,
+				C57F7A56237F3575008153D9 /* Products */,
+				2F4B46FA481CE0BECB87415C /* Pods */,
+				707A3E1DA021296514CE3918 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C57F7A56237F3575008153D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A55237F3575008153D9 /* iOSIdWallDogChallenge.app */,
+				C57F7A69237F3576008153D9 /* iOSIdWallDogChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C57F7A57237F3575008153D9 /* iOSIdWallDogChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A8B237F3FBA008153D9 /* Model */,
+				C57F7A78237F386E008153D9 /* Service */,
+				C57F7A58237F3575008153D9 /* AppDelegate.swift */,
+				C57F7A5A237F3575008153D9 /* ViewController.swift */,
+				C57F7A5C237F3575008153D9 /* Main.storyboard */,
+				C57F7A5F237F3576008153D9 /* Assets.xcassets */,
+				C57F7A61237F3576008153D9 /* LaunchScreen.storyboard */,
+				C57F7A64237F3576008153D9 /* Info.plist */,
+			);
+			path = iOSIdWallDogChallenge;
+			sourceTree = "<group>";
+		};
+		C57F7A6C237F3576008153D9 /* iOSIdWallDogChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeTests.swift */,
+				C57F7A6F237F3576008153D9 /* Info.plist */,
+			);
+			path = iOSIdWallDogChallengeTests;
+			sourceTree = "<group>";
+		};
+		C57F7A78237F386E008153D9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A7A237F394E008153D9 /* Base */,
+				C57F7A79237F3874008153D9 /* Login */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C57F7A79237F3874008153D9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A85237F3986008153D9 /* LoginApiDescriptor.swift */,
+				C57F7A87237F3F65008153D9 /* LoginService.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C57F7A7A237F394E008153D9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A7D237F394E008153D9 /* BaseService.swift */,
+				C57F7A7E237F394E008153D9 /* ServiceError.swift */,
+				C57F7A7F237F394E008153D9 /* Response+Decode.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C57F7A8B237F3FBA008153D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A89237F3FB4008153D9 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C57F7A54237F3575008153D9 /* iOSIdWallDogChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C57F7A72237F3576008153D9 /* Build configuration list for PBXNativeTarget "iOSIdWallDogChallenge" */;
+			buildPhases = (
+				E70C4863C3C61063F75CCB59 /* [CP] Check Pods Manifest.lock */,
+				C57F7A51237F3575008153D9 /* Sources */,
+				C57F7A52237F3575008153D9 /* Frameworks */,
+				C57F7A53237F3575008153D9 /* Resources */,
+				1D82195C1FDC69737E903A74 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSIdWallDogChallenge;
+			productName = iOSIdWallDogChallenge;
+			productReference = C57F7A55237F3575008153D9 /* iOSIdWallDogChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C57F7A68237F3576008153D9 /* iOSIdWallDogChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C57F7A75237F3576008153D9 /* Build configuration list for PBXNativeTarget "iOSIdWallDogChallengeTests" */;
+			buildPhases = (
+				7814FF235DE9F3B1C61BF431 /* [CP] Check Pods Manifest.lock */,
+				C57F7A65237F3576008153D9 /* Sources */,
+				C57F7A66237F3576008153D9 /* Frameworks */,
+				C57F7A67237F3576008153D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C57F7A6B237F3576008153D9 /* PBXTargetDependency */,
+			);
+			name = iOSIdWallDogChallengeTests;
+			productName = iOSIdWallDogChallengeTests;
+			productReference = C57F7A69237F3576008153D9 /* iOSIdWallDogChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C57F7A4D237F3575008153D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = jv;
+				TargetAttributes = {
+					C57F7A54237F3575008153D9 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					C57F7A68237F3576008153D9 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = C57F7A54237F3575008153D9;
+					};
+				};
+			};
+			buildConfigurationList = C57F7A50237F3575008153D9 /* Build configuration list for PBXProject "iOSIdWallDogChallenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C57F7A4C237F3575008153D9;
+			productRefGroup = C57F7A56237F3575008153D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C57F7A54237F3575008153D9 /* iOSIdWallDogChallenge */,
+				C57F7A68237F3576008153D9 /* iOSIdWallDogChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C57F7A53237F3575008153D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C57F7A63237F3576008153D9 /* LaunchScreen.storyboard in Resources */,
+				C57F7A60237F3576008153D9 /* Assets.xcassets in Resources */,
+				C57F7A5E237F3575008153D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57F7A67237F3576008153D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D82195C1FDC69737E903A74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSIdWallDogChallenge/Pods-iOSIdWallDogChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSIdWallDogChallenge/Pods-iOSIdWallDogChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSIdWallDogChallenge/Pods-iOSIdWallDogChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7814FF235DE9F3B1C61BF431 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSIdWallDogChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E70C4863C3C61063F75CCB59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSIdWallDogChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C57F7A51237F3575008153D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C57F7A8A237F3FB4008153D9 /* User.swift in Sources */,
+				C57F7A83237F394E008153D9 /* ServiceError.swift in Sources */,
+				C57F7A5B237F3575008153D9 /* ViewController.swift in Sources */,
+				C57F7A84237F394E008153D9 /* Response+Decode.swift in Sources */,
+				C57F7A86237F3986008153D9 /* LoginApiDescriptor.swift in Sources */,
+				C57F7A82237F394E008153D9 /* BaseService.swift in Sources */,
+				C57F7A59237F3575008153D9 /* AppDelegate.swift in Sources */,
+				C57F7A88237F3F65008153D9 /* LoginService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57F7A65237F3576008153D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C57F7A6E237F3576008153D9 /* iOSIdWallDogChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C57F7A6B237F3576008153D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C57F7A54237F3575008153D9 /* iOSIdWallDogChallenge */;
+			targetProxy = C57F7A6A237F3576008153D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C57F7A5C237F3575008153D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C57F7A5D237F3575008153D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C57F7A61237F3576008153D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C57F7A62237F3576008153D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C57F7A70237F3576008153D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C57F7A71237F3576008153D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C57F7A73237F3576008153D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F39557259D34C945A9E43300 /* Pods-iOSIdWallDogChallenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MX68PC94Q;
+				INFOPLIST_FILE = iOSIdWallDogChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jv.iOSIdWallDogChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C57F7A74237F3576008153D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20133C7554B06DDDC1FD442 /* Pods-iOSIdWallDogChallenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MX68PC94Q;
+				INFOPLIST_FILE = iOSIdWallDogChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jv.iOSIdWallDogChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C57F7A76237F3576008153D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D1B7CE8E351C8C591121C12 /* Pods-iOSIdWallDogChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iOSIdWallDogChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jv.iOSIdWallDogChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSIdWallDogChallenge.app/iOSIdWallDogChallenge";
+			};
+			name = Debug;
+		};
+		C57F7A77237F3576008153D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADE8076F3677381A1C03D068 /* Pods-iOSIdWallDogChallengeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = iOSIdWallDogChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jv.iOSIdWallDogChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSIdWallDogChallenge.app/iOSIdWallDogChallenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C57F7A50237F3575008153D9 /* Build configuration list for PBXProject "iOSIdWallDogChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C57F7A70237F3576008153D9 /* Debug */,
+				C57F7A71237F3576008153D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C57F7A72237F3576008153D9 /* Build configuration list for PBXNativeTarget "iOSIdWallDogChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C57F7A73237F3576008153D9 /* Debug */,
+				C57F7A74237F3576008153D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C57F7A75237F3576008153D9 /* Build configuration list for PBXNativeTarget "iOSIdWallDogChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C57F7A76237F3576008153D9 /* Debug */,
+				C57F7A77237F3576008153D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C57F7A4D237F3575008153D9 /* Project object */;
+}
