@@ -79,44 +79,4 @@ class iOSIdWallDogChallengeTests: XCTestCase {
     }
 }
 
-struct LoginServiceSpy: BaseService, LoginServiceProtocol {
-    typealias Target = IdWallDogAPI
-    let statusCode: Int
-    let email: String
-    
-    init(statusCode: Int, email: String = "jv@gmail.com") {
-        self.statusCode = statusCode
-        self.email = email
-    }
-    
-    var provider: MoyaProvider<Target> {
-        return MoyaProvider<Target>(endpointClosure: getCustomEndpoint,
-                                    stubClosure: MoyaProvider.immediatelyStub,
-                                    plugins: [NetworkLoggerPlugin(verbose: true)])
-    }
-    
-    private func getCustomEndpoint(_ target: Target)-> Endpoint{
-        return Endpoint(url: URL(target: target).absoluteString,
-                        sampleResponseClosure: { .networkResponse(self.statusCode, target.sampleData) },
-                        method: target.method,
-                        task: target.task,
-                        httpHeaderFields: target.headers)
-    }
-    
-    func signup(_ email: String,
-                completion: @escaping (Result<User, ServiceError>) -> ()) {
-        provider.request(.sigup(email)) { result in
-            completion(self.handle(result: result))}
-    }
-    
-    func load(completion: @escaping (Result<User, ServiceError>) -> ()) {
-        signup(self.email) { response in
-            switch response {
-            case .success(let value):
-                completion(.success(value))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
-    }
-}
+

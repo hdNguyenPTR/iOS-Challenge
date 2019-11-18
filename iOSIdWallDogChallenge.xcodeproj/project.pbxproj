@@ -13,13 +13,18 @@
 		C57F7A5E237F3575008153D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A5C237F3575008153D9 /* Main.storyboard */; };
 		C57F7A60237F3576008153D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A5F237F3576008153D9 /* Assets.xcassets */; };
 		C57F7A63237F3576008153D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A61237F3576008153D9 /* LaunchScreen.storyboard */; };
-		C57F7A6E237F3576008153D9 /* iOSIdWallDogChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeTests.swift */; };
+		C57F7A6E237F3576008153D9 /* iOSIdWallDogChallengeAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeAPITests.swift */; };
 		C57F7A82237F394E008153D9 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A7D237F394E008153D9 /* BaseService.swift */; };
 		C57F7A83237F394E008153D9 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A7E237F394E008153D9 /* ServiceError.swift */; };
 		C57F7A84237F394E008153D9 /* Response+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A7F237F394E008153D9 /* Response+Decode.swift */; };
 		C57F7A86237F3986008153D9 /* LoginApiDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A85237F3986008153D9 /* LoginApiDescriptor.swift */; };
 		C57F7A88237F3F65008153D9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A87237F3F65008153D9 /* LoginService.swift */; };
 		C57F7A8A237F3FB4008153D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A89237F3FB4008153D9 /* User.swift */; };
+		C5F4CF81238244A500C63F26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF7F238244A500C63F26 /* LoginViewController.swift */; };
+		C5F4CF82238244A500C63F26 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F4CF80238244A500C63F26 /* LoginViewController.xib */; };
+		C5F4CF85238247E300C63F26 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF84238247E300C63F26 /* LoginViewModel.swift */; };
+		C5F4CF8823824C8B00C63F26 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF8723824C8B00C63F26 /* LoginViewModelTest.swift */; };
+		C5F4CF8B23824D3F00C63F26 /* LoginSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF8A23824D3F00C63F26 /* LoginSpy.swift */; };
 		EC729BA2052AC7F1DAEB4094 /* Pods_iOSIdWallDogChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910C10D3590CEFB3844D00D0 /* Pods_iOSIdWallDogChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +52,7 @@
 		C57F7A62237F3576008153D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57F7A64237F3576008153D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C57F7A69237F3576008153D9 /* iOSIdWallDogChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSIdWallDogChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSIdWallDogChallengeTests.swift; sourceTree = "<group>"; };
+		C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSIdWallDogChallengeAPITests.swift; sourceTree = "<group>"; };
 		C57F7A6F237F3576008153D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C57F7A7D237F394E008153D9 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		C57F7A7E237F394E008153D9 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
@@ -55,6 +60,11 @@
 		C57F7A85237F3986008153D9 /* LoginApiDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiDescriptor.swift; sourceTree = "<group>"; };
 		C57F7A87237F3F65008153D9 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		C57F7A89237F3FB4008153D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C5F4CF7F238244A500C63F26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C5F4CF80238244A500C63F26 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C5F4CF84238247E300C63F26 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C5F4CF8723824C8B00C63F26 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		C5F4CF8A23824D3F00C63F26 /* LoginSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSpy.swift; sourceTree = "<group>"; };
 		F39557259D34C945A9E43300 /* Pods-iOSIdWallDogChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSIdWallDogChallenge.debug.xcconfig"; path = "Target Support Files/Pods-iOSIdWallDogChallenge/Pods-iOSIdWallDogChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +131,7 @@
 		C57F7A57237F3575008153D9 /* iOSIdWallDogChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CF7E2382448200C63F26 /* View */,
 				C57F7A8B237F3FBA008153D9 /* Model */,
 				C57F7A78237F386E008153D9 /* Service */,
 				C57F7A58237F3575008153D9 /* AppDelegate.swift */,
@@ -136,7 +147,9 @@
 		C57F7A6C237F3576008153D9 /* iOSIdWallDogChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeTests.swift */,
+				C5F4CF8923824D2A00C63F26 /* MOCK */,
+				C5F4CF8623824C7300C63F26 /* ViewModel */,
+				C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeAPITests.swift */,
 				C57F7A6F237F3576008153D9 /* Info.plist */,
 			);
 			path = iOSIdWallDogChallengeTests;
@@ -176,6 +189,40 @@
 				C57F7A89237F3FB4008153D9 /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C5F4CF7E2382448200C63F26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CF83238247CC00C63F26 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C5F4CF83238247CC00C63F26 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CF7F238244A500C63F26 /* LoginViewController.swift */,
+				C5F4CF80238244A500C63F26 /* LoginViewController.xib */,
+				C5F4CF84238247E300C63F26 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C5F4CF8623824C7300C63F26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CF8723824C8B00C63F26 /* LoginViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C5F4CF8923824D2A00C63F26 /* MOCK */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CF8A23824D3F00C63F26 /* LoginSpy.swift */,
+			);
+			path = MOCK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F4CF82238244A500C63F26 /* LoginViewController.xib in Resources */,
 				C57F7A63237F3576008153D9 /* LaunchScreen.storyboard in Resources */,
 				C57F7A60237F3576008153D9 /* Assets.xcassets in Resources */,
 				C57F7A5E237F3575008153D9 /* Main.storyboard in Resources */,
@@ -346,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F4CF81238244A500C63F26 /* LoginViewController.swift in Sources */,
 				C57F7A8A237F3FB4008153D9 /* User.swift in Sources */,
 				C57F7A83237F394E008153D9 /* ServiceError.swift in Sources */,
 				C57F7A5B237F3575008153D9 /* ViewController.swift in Sources */,
@@ -353,6 +402,7 @@
 				C57F7A86237F3986008153D9 /* LoginApiDescriptor.swift in Sources */,
 				C57F7A82237F394E008153D9 /* BaseService.swift in Sources */,
 				C57F7A59237F3575008153D9 /* AppDelegate.swift in Sources */,
+				C5F4CF85238247E300C63F26 /* LoginViewModel.swift in Sources */,
 				C57F7A88237F3F65008153D9 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +411,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C57F7A6E237F3576008153D9 /* iOSIdWallDogChallengeTests.swift in Sources */,
+				C5F4CF8B23824D3F00C63F26 /* LoginSpy.swift in Sources */,
+				C5F4CF8823824C8B00C63F26 /* LoginViewModelTest.swift in Sources */,
+				C57F7A6E237F3576008153D9 /* iOSIdWallDogChallengeAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
