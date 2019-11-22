@@ -6,7 +6,6 @@
 //  Copyright © 2019 jv. All rights reserved.
 //
 
-import Moya
 import Result
 
 protocol LoginServiceProtocol {

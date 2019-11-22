@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     }
     @IBOutlet weak var loginTextField: UITextField!
     
-    var viewModel: LoginViewModel!
+    private var viewModel: LoginViewModel!
     
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel

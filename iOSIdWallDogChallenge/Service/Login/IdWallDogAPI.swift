@@ -10,6 +10,7 @@ import Moya
 
 enum IdWallDogAPI {
     case sigup(_ email: String)
+    case feed(_ category: String)
 }
 
 struct IdWallDogPath {
@@ -24,12 +25,16 @@ extension IdWallDogAPI: TargetType {
         switch self {
         case .sigup:
             return IdWallDogPath.sigup
+        case .feed(_):
+            return IdWallDogPath.feed
         }
     }
     var method: Moya.Method {
         switch self {
         case .sigup:
             return .post
+        case .feed(_):
+            return .get
         }
     }
     var task: Task {
@@ -40,6 +45,10 @@ extension IdWallDogAPI: TargetType {
                 parameters: ["email": email],
                 encoding: JSONEncoding.default)
             
+        case .feed(let category):
+            return .requestParameters(parameters: ["category": category],
+                                      encoding: URLEncoding(destination: .queryString))
+            
         }
     }
     
@@ -47,18 +56,29 @@ extension IdWallDogAPI: TargetType {
         switch self {
         case .sigup(let email):
             return """
-        {
-            "user": {
+                {
+                "user": {
                 "_id": "someId",
                 "email": "\(email)",
                 "token": "someToken",
                 "createdAt": "2019-11-15T19:24:10.337Z",
                 "updatedAt": "2019-11-15T19:24:10.337Z",
                 "__v": 0
+                }
+                }
+                """.utf8Encoded
+        case .feed(let category):
+            return """
+                {
+                    "category": "\(category)",
+                    "list": [
+                    "https://images.dog.ceo/breeds/hound-english/n02089973_1.jpg"
+                    ]
+            
             }
+            """.utf8Encoded
         }
-        """.utf8Encoded
-        }
+        
     }
     
     public var headers: [String: String]? {
@@ -66,16 +86,17 @@ extension IdWallDogAPI: TargetType {
         case .sigup:
             return [
                 "Content-Type": "application/json"
-             ]
+            ]
         default:
             return [
                 "Content-Type": "application/json",
                 "Authorization": "Token"
             ]
         }
-
+        
     }
 }
+
 extension String {
     var urlEscaped: String {
         return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
