@@ -15,6 +15,7 @@ enum IdWallDogAPI {
 struct IdWallDogPath {
     static let baseUrl  = "https://api-iddog.idwall.co/"
     static let sigup = "signup"
+    static let feed = "feed"
 }
 
 extension IdWallDogAPI: TargetType {

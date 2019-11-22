@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AF278BCBCB8AF1E524F1E539 /* Pods_iOSIdWallDogChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE504B3ADE1CA295A98004A /* Pods_iOSIdWallDogChallengeTests.framework */; };
 		C57F7A59237F3575008153D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A58237F3575008153D9 /* AppDelegate.swift */; };
-		C57F7A5B237F3575008153D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A5A237F3575008153D9 /* ViewController.swift */; };
 		C57F7A5E237F3575008153D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A5C237F3575008153D9 /* Main.storyboard */; };
 		C57F7A60237F3576008153D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A5F237F3576008153D9 /* Assets.xcassets */; };
 		C57F7A63237F3576008153D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A61237F3576008153D9 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,7 @@
 		C57F7A82237F394E008153D9 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A7D237F394E008153D9 /* BaseService.swift */; };
 		C57F7A83237F394E008153D9 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A7E237F394E008153D9 /* ServiceError.swift */; };
 		C57F7A84237F394E008153D9 /* Response+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A7F237F394E008153D9 /* Response+Decode.swift */; };
-		C57F7A86237F3986008153D9 /* LoginApiDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A85237F3986008153D9 /* LoginApiDescriptor.swift */; };
+		C57F7A86237F3986008153D9 /* IdWallDogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A85237F3986008153D9 /* IdWallDogAPI.swift */; };
 		C57F7A88237F3F65008153D9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A87237F3F65008153D9 /* LoginService.swift */; };
 		C57F7A8A237F3FB4008153D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A89237F3FB4008153D9 /* User.swift */; };
 		C5F4CF81238244A500C63F26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF7F238244A500C63F26 /* LoginViewController.swift */; };
@@ -25,6 +24,15 @@
 		C5F4CF85238247E300C63F26 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF84238247E300C63F26 /* LoginViewModel.swift */; };
 		C5F4CF8823824C8B00C63F26 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF8723824C8B00C63F26 /* LoginViewModelTest.swift */; };
 		C5F4CF8B23824D3F00C63F26 /* LoginSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF8A23824D3F00C63F26 /* LoginSpy.swift */; };
+		C5F4CF8E2383688600C63F26 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF8D2383688600C63F26 /* Feed.swift */; };
+		C5F4CF922383852800C63F26 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF902383852800C63F26 /* FeedViewController.swift */; };
+		C5F4CF932383852800C63F26 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F4CF912383852800C63F26 /* FeedViewController.xib */; };
+		C5F4CF9623838E0600C63F26 /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF9523838E0600C63F26 /* CollectionDataSource.swift */; };
+		C5F4CF9923838F2900C63F26 /* DogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF9723838F2900C63F26 /* DogCollectionViewCell.swift */; };
+		C5F4CF9A23838F2900C63F26 /* DogCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5F4CF9823838F2900C63F26 /* DogCollectionViewCell.xib */; };
+		C5F4CF9E2387621100C63F26 /* KeychainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CF9D2387621100C63F26 /* KeychainTests.swift */; };
+		C5F4CFA1238762BA00C63F26 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CFA0238762BA00C63F26 /* Storage.swift */; };
+		C5F4CFA42387711700C63F26 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CFA32387711700C63F26 /* UIViewControllerExtension.swift */; };
 		EC729BA2052AC7F1DAEB4094 /* Pods_iOSIdWallDogChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910C10D3590CEFB3844D00D0 /* Pods_iOSIdWallDogChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +54,6 @@
 		ADE8076F3677381A1C03D068 /* Pods-iOSIdWallDogChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSIdWallDogChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-iOSIdWallDogChallengeTests/Pods-iOSIdWallDogChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		C57F7A55237F3575008153D9 /* iOSIdWallDogChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSIdWallDogChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57F7A58237F3575008153D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C57F7A5A237F3575008153D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C57F7A5D237F3575008153D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C57F7A5F237F3576008153D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57F7A62237F3576008153D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +64,7 @@
 		C57F7A7D237F394E008153D9 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		C57F7A7E237F394E008153D9 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		C57F7A7F237F394E008153D9 /* Response+Decode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Decode.swift"; sourceTree = "<group>"; };
-		C57F7A85237F3986008153D9 /* LoginApiDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginApiDescriptor.swift; sourceTree = "<group>"; };
+		C57F7A85237F3986008153D9 /* IdWallDogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdWallDogAPI.swift; sourceTree = "<group>"; };
 		C57F7A87237F3F65008153D9 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		C57F7A89237F3FB4008153D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C5F4CF7F238244A500C63F26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +72,15 @@
 		C5F4CF84238247E300C63F26 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C5F4CF8723824C8B00C63F26 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
 		C5F4CF8A23824D3F00C63F26 /* LoginSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSpy.swift; sourceTree = "<group>"; };
+		C5F4CF8D2383688600C63F26 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		C5F4CF902383852800C63F26 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		C5F4CF912383852800C63F26 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		C5F4CF9523838E0600C63F26 /* CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		C5F4CF9723838F2900C63F26 /* DogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5F4CF9823838F2900C63F26 /* DogCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogCollectionViewCell.xib; sourceTree = "<group>"; };
+		C5F4CF9D2387621100C63F26 /* KeychainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTests.swift; sourceTree = "<group>"; };
+		C5F4CFA0238762BA00C63F26 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		C5F4CFA32387711700C63F26 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		F39557259D34C945A9E43300 /* Pods-iOSIdWallDogChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSIdWallDogChallenge.debug.xcconfig"; path = "Target Support Files/Pods-iOSIdWallDogChallenge/Pods-iOSIdWallDogChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,11 +147,11 @@
 		C57F7A57237F3575008153D9 /* iOSIdWallDogChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CFA22387710F00C63F26 /* Extension */,
 				C5F4CF7E2382448200C63F26 /* View */,
 				C57F7A8B237F3FBA008153D9 /* Model */,
 				C57F7A78237F386E008153D9 /* Service */,
 				C57F7A58237F3575008153D9 /* AppDelegate.swift */,
-				C57F7A5A237F3575008153D9 /* ViewController.swift */,
 				C57F7A5C237F3575008153D9 /* Main.storyboard */,
 				C57F7A5F237F3576008153D9 /* Assets.xcassets */,
 				C57F7A61237F3576008153D9 /* LaunchScreen.storyboard */,
@@ -147,6 +163,7 @@
 		C57F7A6C237F3576008153D9 /* iOSIdWallDogChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CF9C2387609200C63F26 /* Keychain */,
 				C5F4CF8923824D2A00C63F26 /* MOCK */,
 				C5F4CF8623824C7300C63F26 /* ViewModel */,
 				C57F7A6D237F3576008153D9 /* iOSIdWallDogChallengeAPITests.swift */,
@@ -158,6 +175,7 @@
 		C57F7A78237F386E008153D9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CF9F238762AA00C63F26 /* Storage */,
 				C57F7A7A237F394E008153D9 /* Base */,
 				C57F7A79237F3874008153D9 /* Login */,
 			);
@@ -167,7 +185,7 @@
 		C57F7A79237F3874008153D9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C57F7A85237F3986008153D9 /* LoginApiDescriptor.swift */,
+				C57F7A85237F3986008153D9 /* IdWallDogAPI.swift */,
 				C57F7A87237F3F65008153D9 /* LoginService.swift */,
 			);
 			path = Login;
@@ -186,7 +204,8 @@
 		C57F7A8B237F3FBA008153D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C57F7A89237F3FB4008153D9 /* User.swift */,
+				C5F4CF8F2383689100C63F26 /* User */,
+				C5F4CF8C2383685000C63F26 /* Feed */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +213,7 @@
 		C5F4CF7E2382448200C63F26 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CF9423838DE000C63F26 /* Feed */,
 				C5F4CF83238247CC00C63F26 /* Login */,
 			);
 			path = View;
@@ -223,6 +243,58 @@
 				C5F4CF8A23824D3F00C63F26 /* LoginSpy.swift */,
 			);
 			path = MOCK;
+			sourceTree = "<group>";
+		};
+		C5F4CF8C2383685000C63F26 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CF8D2383688600C63F26 /* Feed.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		C5F4CF8F2383689100C63F26 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A89237F3FB4008153D9 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		C5F4CF9423838DE000C63F26 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CF902383852800C63F26 /* FeedViewController.swift */,
+				C5F4CF912383852800C63F26 /* FeedViewController.xib */,
+				C5F4CF9523838E0600C63F26 /* CollectionDataSource.swift */,
+				C5F4CF9723838F2900C63F26 /* DogCollectionViewCell.swift */,
+				C5F4CF9823838F2900C63F26 /* DogCollectionViewCell.xib */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		C5F4CF9C2387609200C63F26 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CF9D2387621100C63F26 /* KeychainTests.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		C5F4CF9F238762AA00C63F26 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CFA0238762BA00C63F26 /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		C5F4CFA22387710F00C63F26 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CFA32387711700C63F26 /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +382,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F4CF82238244A500C63F26 /* LoginViewController.xib in Resources */,
+				C5F4CF932383852800C63F26 /* FeedViewController.xib in Resources */,
 				C57F7A63237F3576008153D9 /* LaunchScreen.storyboard in Resources */,
 				C57F7A60237F3576008153D9 /* Assets.xcassets in Resources */,
 				C57F7A5E237F3575008153D9 /* Main.storyboard in Resources */,
+				C5F4CF9A23838F2900C63F26 /* DogCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,15 +469,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F4CF81238244A500C63F26 /* LoginViewController.swift in Sources */,
+				C5F4CF9923838F2900C63F26 /* DogCollectionViewCell.swift in Sources */,
 				C57F7A8A237F3FB4008153D9 /* User.swift in Sources */,
 				C57F7A83237F394E008153D9 /* ServiceError.swift in Sources */,
-				C57F7A5B237F3575008153D9 /* ViewController.swift in Sources */,
+				C5F4CFA42387711700C63F26 /* UIViewControllerExtension.swift in Sources */,
+				C5F4CF8E2383688600C63F26 /* Feed.swift in Sources */,
 				C57F7A84237F394E008153D9 /* Response+Decode.swift in Sources */,
-				C57F7A86237F3986008153D9 /* LoginApiDescriptor.swift in Sources */,
+				C57F7A86237F3986008153D9 /* IdWallDogAPI.swift in Sources */,
 				C57F7A82237F394E008153D9 /* BaseService.swift in Sources */,
 				C57F7A59237F3575008153D9 /* AppDelegate.swift in Sources */,
 				C5F4CF85238247E300C63F26 /* LoginViewModel.swift in Sources */,
+				C5F4CF922383852800C63F26 /* FeedViewController.swift in Sources */,
 				C57F7A88237F3F65008153D9 /* LoginService.swift in Sources */,
+				C5F4CF9623838E0600C63F26 /* CollectionDataSource.swift in Sources */,
+				C5F4CFA1238762BA00C63F26 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5F4CF8B23824D3F00C63F26 /* LoginSpy.swift in Sources */,
+				C5F4CF9E2387621100C63F26 /* KeychainTests.swift in Sources */,
 				C5F4CF8823824C8B00C63F26 /* LoginViewModelTest.swift in Sources */,
 				C57F7A6E237F3576008153D9 /* iOSIdWallDogChallengeAPITests.swift in Sources */,
 			);

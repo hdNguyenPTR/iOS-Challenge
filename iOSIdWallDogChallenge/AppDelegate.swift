@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let root = UINavigationController(rootViewController: LoginViewController())
+        let root = UINavigationController(rootViewController: LoginViewController(viewModel: LoginViewModel(service: LoginService())))
+        root.navigationBar.isTranslucent = true
         window?.rootViewController = root
         window?.makeKeyAndVisible()
         return true

@@ -7,28 +7,74 @@
 //
 
 import XCTest
+@testable import iOSIdWallDogChallenge
 
 class LoginViewModelTest: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        let apiService = LoginServiceSpy(statusCode: 200)
+    func testLoginToGoToFeed() {
+        let sut = makeSut(statusCode: 200)
+        var user: User?
         
-        let viewModel = LoginViewModel(service: apiService)
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        sut.goToFeed = { userResponse in
+            user = userResponse
         }
+        
+        sut.login("jvlucas@g.com.br")
+      
+        
+        XCTAssertEqual(user?.user.email, "jvlucas@g.com.br")
     }
-
+    
+    func testLogin_showError() {
+        let sut = makeSut(statusCode: 500)
+        var serverError: ServiceError?
+        
+        sut.showError = { error in
+            serverError = error
+        }
+        
+        sut.login("jvlucas@g.com.br")
+        
+        XCTAssertEqual(serverError, ServiceError.serverError)
+    }
+    
+    func testInvalidEmail() {
+        let sut = makeSut(statusCode: 200)
+        var isValidEmail = true
+        
+        sut.invalidEmailError = {
+            isValidEmail = false
+        }
+        
+        sut.login("aaaaa")
+        
+        XCTAssertFalse(isValidEmail)
+    }
+    
+    func testValidEmail() {
+        let sut = makeSut(statusCode: 200)
+        
+        let validEmail = sut.isValid("cc@m.com")
+        let validEmail2 = sut.isValid("cc@a.com")
+        
+        let notValidEmail = sut.isValid("aaaaa")
+        let invalidEmailNoDot = sut.isValid("cc@")
+        let invalidEmailWithDot = sut.isValid("cc@.")
+        let emptyEmail = sut.isValid("")
+        
+        XCTAssertTrue(validEmail)
+        XCTAssertTrue(validEmail2)
+       
+        XCTAssertFalse(notValidEmail)
+        XCTAssertFalse(invalidEmailNoDot)
+        XCTAssertFalse(invalidEmailWithDot)
+        XCTAssertFalse(emptyEmail)
+    }
+    
+    private func makeSut(statusCode: Int) -> LoginViewModel{
+        let apiService = LoginServiceSpy(statusCode: statusCode)
+        let viewModel = LoginViewModel(service: apiService)
+        
+        return viewModel
+    }
 }
