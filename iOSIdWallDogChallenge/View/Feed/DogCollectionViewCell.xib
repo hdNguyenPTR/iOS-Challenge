@@ -19,20 +19,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="98" height="114"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FTb-Zz-XpN">
-                        <rect key="frame" x="0.0" y="0.0" width="98" height="114"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FTb-Zz-XpN">
+                        <rect key="frame" x="4" y="0.0" width="90" height="114"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="98" id="6A0-uC-8rs"/>
-                            <constraint firstAttribute="height" constant="114" id="tL2-sn-UvR"/>
+                            <constraint firstAttribute="width" priority="250" constant="98" id="6A0-uC-8rs"/>
+                            <constraint firstAttribute="height" priority="750" constant="114" id="tL2-sn-UvR"/>
                         </constraints>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="FTb-Zz-XpN" secondAttribute="trailing" id="IPQ-rx-r0m"/>
+                <constraint firstAttribute="trailing" secondItem="FTb-Zz-XpN" secondAttribute="trailing" constant="4" id="IPQ-rx-r0m"/>
                 <constraint firstAttribute="bottom" secondItem="FTb-Zz-XpN" secondAttribute="bottom" id="jBo-pA-Zb1"/>
                 <constraint firstItem="FTb-Zz-XpN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="koI-uz-pWV"/>
-                <constraint firstItem="FTb-Zz-XpN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rzV-zr-cea"/>
+                <constraint firstItem="FTb-Zz-XpN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="rzV-zr-cea"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="98" height="114"/>

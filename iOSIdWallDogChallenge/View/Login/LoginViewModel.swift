@@ -26,6 +26,7 @@ class LoginViewModel {
             loginService.signup(email) { [weak self] response in
                 switch response {
                 case .success(let user):
+                    self?.saveToken(user.user.token)
                     self?.goToFeed?(user)
                 case .failure(let error):
                     self?.showError?(error)
@@ -35,8 +36,12 @@ class LoginViewModel {
         }else {
             isLoading?(false)
             invalidEmailError?()
-            
         }
+    }
+    
+   
+    private func saveToken(_ token: String) {
+        LocalStorage().save(data: token, key: "token")
     }
     
     func isValid(_ email: String) -> Bool {

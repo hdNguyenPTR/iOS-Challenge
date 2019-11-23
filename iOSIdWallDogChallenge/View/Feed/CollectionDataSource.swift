@@ -10,6 +10,18 @@ import UIKit
 
 protocol Identifiable: class { }
 
+extension Identifiable where Self: UIView {
+    
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
+    static var bundle: Bundle {
+        return Bundle(for: self)
+    }
+    
+}
+
 extension Identifiable where Self: UICollectionViewCell {
     
     static var identifier: String {
@@ -19,7 +31,24 @@ extension Identifiable where Self: UICollectionViewCell {
     static var bundle: Bundle {
         return Bundle(for: self)
     }
+    
 }
+
+extension Identifiable where Self: UIViewController {
+    
+    static var identifier: String {
+        return String(describing: self)
+    }
+    
+    static var bundle: Bundle {
+        return Bundle(for: self)
+    }
+    
+    static var nibName: String {
+        return identifier
+    }
+}
+
 
 protocol ViewCellHandler: Identifiable {
     associatedtype Item
@@ -70,3 +99,4 @@ extension UICollectionView {
         
     }
 }
+

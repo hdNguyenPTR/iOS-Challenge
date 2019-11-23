@@ -35,7 +35,8 @@ class LoginViewController: UIViewController {
     
     private func bind() {
         viewModel.goToFeed = { [unowned self] user in
-            self.navigationController?.pushViewController(FeedViewController(),
+            self.navigationController?.pushViewController(
+                FeedViewController(viewModel: FeedViewModel(service: FeedService())),
                                                           animated: true)
         }
         

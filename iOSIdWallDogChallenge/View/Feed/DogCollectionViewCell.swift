@@ -7,28 +7,31 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DogCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var dogImageView: UIImageView!
-//
-//    private var viewRepresentable: DogCollectionRepresentable? {
-//        didSet {
-//
-//            }
-//        }
+
+    private var viewRepresentable: String? {
+        didSet {
+            guard let absoluteUrl = viewRepresentable, let url = URL(string: absoluteUrl) else { return }
+                dogImageView.kf.indicatorType = .activity
+                dogImageView.kf.setImage(with: url)
+            }
+        }
 }
 
-//extension DogCollectionViewCell: ViewCellHandler {
-//    
-//    typealias Item = DogCollectionRepresentable
-//    
-//    var data: Item? {
-//        get {
-//            return nil
-//        }
-//        set {
-//            viewRepresentable = newValue
-//        }
-//    }
-//}
+extension DogCollectionViewCell: ViewCellHandler {
+
+    typealias Item = String
+
+    var data: Item? {
+        get {
+            return nil
+        }
+        set {
+            viewRepresentable = newValue
+        }
+    }
+}

@@ -70,15 +70,14 @@ extension IdWallDogAPI: TargetType {
         case .feed(let category):
             return """
                 {
-                    "category": "\(category)",
-                    "list": [
-                    "https://images.dog.ceo/breeds/hound-english/n02089973_1.jpg"
-                    ]
-            
-            }
-            """.utf8Encoded
+                "category": "\(category)",
+                "list": [
+                "https://images.dog.ceo/breeds/hound-english/n02089973_1.jpg"
+                ]
+                
+                }
+                """.utf8Encoded
         }
-        
     }
     
     public var headers: [String: String]? {
@@ -90,10 +89,9 @@ extension IdWallDogAPI: TargetType {
         default:
             return [
                 "Content-Type": "application/json",
-                "Authorization": "Token"
+                "Authorization": LocalStorage().get(for: "token") ?? ""
             ]
         }
-        
     }
 }
 

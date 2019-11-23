@@ -8,26 +8,46 @@
 
 import Foundation
 
-class FeedViewModel {
-    let service: FeedService
-    let category: String
-    
-    let showFeed: ((Feed)->())?
-    let showError: ((ServiceError)->())?
-    
-    init(service: FeedService, category: String) {
-        self.service = service
-        self.category = category
+
+protocol FeedRepresentable {
+    var feedImages: [URL?]? { get }
+}
+
+struct Dog: FeedRepresentable {
+    var feedImages: [URL?]?
+    private var feed: Feed {
+        didSet {
+            feedImages = feed.list.map { URL(string: $0)}
+        }
     }
     
-    func getFeed(){
+    init(for feed: Feed) {
+        self.feed = feed
+    }
+}
+
+
+class FeedViewModel {
+    private let service: FeedServiceProtocol
+    
+    var showFeed: (([String])->())?
+    var showError: ((ServiceError)->())?
+    var isLoading: ((Bool)->())?
+    
+    init(service: FeedServiceProtocol) {
+        self.service = service
+    }
+    
+    func getFeed(for category: String){
+        isLoading?(true)
         service.feed(for: category) { [unowned self] response in
             switch response {
             case .success(let feed):
-                self.showFeed?(feed)
+                self.showFeed?(feed.list)
             case .failure(let error):
                 self.showError?(error)
             }
+            self.isLoading?(false)
         }
     }
 }

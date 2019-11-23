@@ -8,11 +8,6 @@
 
 import Foundation
 
-protocol DogRepresentable {
-    
-    var imageURL: URL? { get }
-        
-}
 struct Feed: Codable {
     let category: String
     let list: [String]

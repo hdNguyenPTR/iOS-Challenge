@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedViewController" customModule="iOSIdWallDogChallenge" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="Cw7-2n-O6s" id="L61-9U-FS3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="breedButtons" destination="R44-df-89W" collectionClass="NSMutableArray" id="PlZ-PP-h4s"/>
                 <outletCollection property="breedButtons" destination="GLq-Ph-GTE" collectionClass="NSMutableArray" id="msE-I9-qLt"/>
@@ -35,6 +36,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="93.5" height="89"/>
                                     <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <state key="normal" title="Button" image="husky"/>
+                                    <connections>
+                                        <action selector="didTapHusky:" destination="-1" eventType="touchUpInside" id="CRh-81-paE"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLq-Ph-GTE">
                                     <rect key="frame" x="101.5" y="0.0" width="93.5" height="89"/>

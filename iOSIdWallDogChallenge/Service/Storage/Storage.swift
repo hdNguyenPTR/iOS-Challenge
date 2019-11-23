@@ -20,6 +20,7 @@ class LocalStorage: Storage {
         return KeychainWrapper.standard.removeObject(forKey: key)
     }
     
+    @discardableResult
     func save(data: String, key: String)->Bool {
         return KeychainWrapper.standard.set(data, forKey: key)
     }

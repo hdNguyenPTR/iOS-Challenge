@@ -7,8 +7,7 @@
 //
 
 import XCTest
-import Moya
-import Result
+
 @testable import iOSIdWallDogChallenge
 
 class LoginApiTests: XCTestCase {

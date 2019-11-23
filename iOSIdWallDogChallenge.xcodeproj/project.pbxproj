@@ -38,6 +38,7 @@
 		C5F4CFAC2387832C00C63F26 /* FeedSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CFAB2387832C00C63F26 /* FeedSpy.swift */; };
 		C5F4CFAE2387859D00C63F26 /* FeedTestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CFAD2387859D00C63F26 /* FeedTestApi.swift */; };
 		C5F4CFB123878C1E00C63F26 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CFB023878C1E00C63F26 /* FeedViewModel.swift */; };
+		C5F4CFB42389C63300C63F26 /* FeedViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4CFB32389C63300C63F26 /* FeedViewModelTest.swift */; };
 		EC729BA2052AC7F1DAEB4094 /* Pods_iOSIdWallDogChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910C10D3590CEFB3844D00D0 /* Pods_iOSIdWallDogChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		C5F4CFAB2387832C00C63F26 /* FeedSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSpy.swift; sourceTree = "<group>"; };
 		C5F4CFAD2387859D00C63F26 /* FeedTestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTestApi.swift; sourceTree = "<group>"; };
 		C5F4CFB023878C1E00C63F26 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		C5F4CFB32389C63300C63F26 /* FeedViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelTest.swift; sourceTree = "<group>"; };
 		F39557259D34C945A9E43300 /* Pods-iOSIdWallDogChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSIdWallDogChallenge.debug.xcconfig"; path = "Target Support Files/Pods-iOSIdWallDogChallenge/Pods-iOSIdWallDogChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,8 @@
 		C57F7A78237F386E008153D9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CFB62389CCF900C63F26 /* API */,
+				C5F4CFB52389CCE900C63F26 /* Feed */,
 				C5F4CF9F238762AA00C63F26 /* Storage */,
 				C57F7A7A237F394E008153D9 /* Base */,
 				C57F7A79237F3874008153D9 /* Login */,
@@ -195,9 +199,7 @@
 		C57F7A79237F3874008153D9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C57F7A85237F3986008153D9 /* IdWallDogAPI.swift */,
 				C57F7A87237F3F65008153D9 /* LoginService.swift */,
-				C5F4CFA723877B7900C63F26 /* FeedService.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -323,6 +325,7 @@
 		C5F4CFA623877AE400C63F26 /* FeeTests */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CFB22389C59E00C63F26 /* ViewModel */,
 				C5F4CFAD2387859D00C63F26 /* FeedTestApi.swift */,
 			);
 			path = FeeTests;
@@ -334,6 +337,30 @@
 				C5F4CFB023878C1E00C63F26 /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C5F4CFB22389C59E00C63F26 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CFB32389C63300C63F26 /* FeedViewModelTest.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C5F4CFB52389CCE900C63F26 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CFA723877B7900C63F26 /* FeedService.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		C5F4CFB62389CCF900C63F26 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A85237F3986008153D9 /* IdWallDogAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -533,6 +560,7 @@
 			files = (
 				C5F4CF8B23824D3F00C63F26 /* LoginSpy.swift in Sources */,
 				C5F4CF9E2387621100C63F26 /* KeychainTests.swift in Sources */,
+				C5F4CFB42389C63300C63F26 /* FeedViewModelTest.swift in Sources */,
 				C5F4CFAC2387832C00C63F26 /* FeedSpy.swift in Sources */,
 				C5F4CF8823824C8B00C63F26 /* LoginViewModelTest.swift in Sources */,
 				C5F4CFAE2387859D00C63F26 /* FeedTestApi.swift in Sources */,

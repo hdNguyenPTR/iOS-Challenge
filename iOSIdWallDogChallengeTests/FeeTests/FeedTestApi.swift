@@ -6,8 +6,7 @@
 //  Copyright © 2019 jv. All rights reserved.
 //
 import XCTest
-import Moya
-import Result
+
 @testable import iOSIdWallDogChallenge
 
 class  FeedApiTests: XCTestCase {
