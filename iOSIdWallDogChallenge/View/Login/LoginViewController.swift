@@ -15,7 +15,19 @@ class LoginViewController: UIViewController {
             loginButton.layer.cornerRadius = 25.0
         }
     }
-    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var loginTextField: UITextField!{
+        didSet {
+            DispatchQueue.main.async {
+                let bottomLineView = UIView(frame: CGRect(x: 0.0,
+                                                          y: self.loginTextField.bounds.height,
+                                                          width: self.loginTextField.bounds.width, height: 0.5))
+                bottomLineView.backgroundColor = UIColor.black
+                self.loginTextField.addSubview(bottomLineView)
+            }
+            
+            loginTextField.delegate = self
+        }
+    }
     
     private var viewModel: LoginViewModel!
     
@@ -30,6 +42,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true,
+                                                          animated: false)
         bind()
     }
     
@@ -63,3 +77,23 @@ class LoginViewController: UIViewController {
         viewModel.login(loginTextField.text)
     }
 }
+
+extension LoginViewController: UITextFieldDelegate {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        return limitMaxCharactersLenght(textField.text, range: range,
+                                        replacementString: string)
+    }
+    
+    private func limitMaxCharactersLenght(_ text: String?, range: NSRange,
+                                          replacementString string: String)-> Bool {
+        let currentText = text ?? ""
+        
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        
+        return updatedText.count <= 50
+    }
+}
+

@@ -11,7 +11,11 @@ import Kingfisher
 
 class DogCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var dogImageView: UIImageView!
+    @IBOutlet weak var dogImageView: UIImageView!{
+        didSet {
+            dogImageView.layer.cornerRadius = 8.0
+        }
+    }
 
     private var viewRepresentable: String? {
         didSet {

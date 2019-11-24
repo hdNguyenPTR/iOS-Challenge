@@ -16,7 +16,7 @@ class  FeedApiTests: XCTestCase {
         let sut = makeSUT(code: 200)
         var feed: Feed?
         
-        sut.feed(for: "hound") { response in
+        sut.feed(for: Dog.hound.rawValue) { response in
             switch response {
             case .success(let data):
                 feed = data
@@ -25,7 +25,7 @@ class  FeedApiTests: XCTestCase {
             }
         }
         
-        XCTAssertEqual(feed?.category, "hound")
+        XCTAssertEqual(feed?.category, Dog.hound.rawValue)
     }
     
     func testLogin_response401() {
@@ -70,7 +70,8 @@ class  FeedApiTests: XCTestCase {
         XCTAssertEqual(serviceError, .notFound)
     }
     
-    func makeSUT(code: Int, category: String = "husky")-> FeedServiceSpy{
+    func makeSUT(code: Int,
+                 category: String = Dog.husky.rawValue)-> FeedServiceSpy{
         let feedService = FeedServiceSpy(statusCode: code,
                                            category: category)
         return feedService

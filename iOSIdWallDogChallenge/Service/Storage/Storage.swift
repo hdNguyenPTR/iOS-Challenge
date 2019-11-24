@@ -16,6 +16,7 @@ protocol Storage {
 }
 
 class LocalStorage: Storage {
+    @discardableResult
     func remove(for key: String)-> Bool {
         return KeychainWrapper.standard.removeObject(forKey: key)
     }

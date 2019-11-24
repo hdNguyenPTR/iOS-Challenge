@@ -12,3 +12,11 @@ struct Feed: Codable {
     let category: String
     let list: [String]
 }
+
+enum Dog: String {
+    case husky
+    case hound
+    case pug
+    case labrador
+}
+

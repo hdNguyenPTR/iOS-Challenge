@@ -8,31 +8,14 @@
 
 import Foundation
 
-
-protocol FeedRepresentable {
-    var feedImages: [URL?]? { get }
-}
-
-struct Dog: FeedRepresentable {
-    var feedImages: [URL?]?
-    private var feed: Feed {
-        didSet {
-            feedImages = feed.list.map { URL(string: $0)}
-        }
-    }
-    
-    init(for feed: Feed) {
-        self.feed = feed
-    }
-}
-
-
 class FeedViewModel {
     private let service: FeedServiceProtocol
     
-    var showFeed: (([String])->())?
+    var showFeed: ((Feed)->())?
     var showError: ((ServiceError)->())?
     var isLoading: ((Bool)->())?
+    var updateBreed: ((String)->())?
+    var backToLogin: (()->())?
     
     init(service: FeedServiceProtocol) {
         self.service = service
@@ -40,14 +23,24 @@ class FeedViewModel {
     
     func getFeed(for category: String){
         isLoading?(true)
-        service.feed(for: category) { [unowned self] response in
+        service.feed(for: category) { [weak self] response in
+            guard let self = self else { return }
             switch response {
             case .success(let feed):
-                self.showFeed?(feed.list)
+                self.updateBreed?(feed.category)
+                self.showFeed?(feed)
             case .failure(let error):
+                if error == ServiceError.unauthorized {
+                    self.logout()
+                }
                 self.showError?(error)
             }
             self.isLoading?(false)
         }
+    }
+    
+    private func logout() {
+        LocalStorage().remove(for: "token")
+        backToLogin?()
     }
 }

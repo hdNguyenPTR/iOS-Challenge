@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AF278BCBCB8AF1E524F1E539 /* Pods_iOSIdWallDogChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE504B3ADE1CA295A98004A /* Pods_iOSIdWallDogChallengeTests.framework */; };
 		C57F7A59237F3575008153D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A58237F3575008153D9 /* AppDelegate.swift */; };
-		C57F7A5E237F3575008153D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A5C237F3575008153D9 /* Main.storyboard */; };
 		C57F7A60237F3576008153D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A5F237F3576008153D9 /* Assets.xcassets */; };
 		C57F7A63237F3576008153D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57F7A61237F3576008153D9 /* LaunchScreen.storyboard */; };
 		C57F7A6E237F3576008153D9 /* LoginApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57F7A6D237F3576008153D9 /* LoginApiTests.swift */; };
@@ -60,7 +59,6 @@
 		ADE8076F3677381A1C03D068 /* Pods-iOSIdWallDogChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSIdWallDogChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-iOSIdWallDogChallengeTests/Pods-iOSIdWallDogChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		C57F7A55237F3575008153D9 /* iOSIdWallDogChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSIdWallDogChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57F7A58237F3575008153D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C57F7A5D237F3575008153D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C57F7A5F237F3576008153D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57F7A62237F3576008153D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C57F7A64237F3576008153D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,12 +157,11 @@
 		C57F7A57237F3575008153D9 /* iOSIdWallDogChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CFBB238A48DC00C63F26 /* Application */,
 				C5F4CFA22387710F00C63F26 /* Extension */,
 				C5F4CF7E2382448200C63F26 /* View */,
 				C57F7A8B237F3FBA008153D9 /* Model */,
 				C57F7A78237F386E008153D9 /* Service */,
-				C57F7A58237F3575008153D9 /* AppDelegate.swift */,
-				C57F7A5C237F3575008153D9 /* Main.storyboard */,
 				C57F7A5F237F3576008153D9 /* Assets.xcassets */,
 				C57F7A61237F3576008153D9 /* LaunchScreen.storyboard */,
 				C57F7A64237F3576008153D9 /* Info.plist */,
@@ -279,12 +276,10 @@
 		C5F4CF9423838DE000C63F26 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CFB8238A347200C63F26 /* Collection */,
+				C5F4CFB7238A345800C63F26 /* Controller */,
 				C5F4CFAF23878C1100C63F26 /* ViewModel */,
-				C5F4CF902383852800C63F26 /* FeedViewController.swift */,
 				C5F4CF912383852800C63F26 /* FeedViewController.xib */,
-				C5F4CF9523838E0600C63F26 /* CollectionDataSource.swift */,
-				C5F4CF9723838F2900C63F26 /* DogCollectionViewCell.swift */,
-				C5F4CF9823838F2900C63F26 /* DogCollectionViewCell.xib */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -316,7 +311,7 @@
 		C5F4CFA523877ACB00C63F26 /* LoginTests */ = {
 			isa = PBXGroup;
 			children = (
-				C57F7A6D237F3576008153D9 /* LoginApiTests.swift */,
+				C5F4CFBA238A483F00C63F26 /* API */,
 				C5F4CF8623824C7300C63F26 /* ViewModel */,
 			);
 			path = LoginTests;
@@ -325,8 +320,8 @@
 		C5F4CFA623877AE400C63F26 /* FeeTests */ = {
 			isa = PBXGroup;
 			children = (
+				C5F4CFB9238A483300C63F26 /* API */,
 				C5F4CFB22389C59E00C63F26 /* ViewModel */,
-				C5F4CFAD2387859D00C63F26 /* FeedTestApi.swift */,
 			);
 			path = FeeTests;
 			sourceTree = "<group>";
@@ -361,6 +356,48 @@
 				C57F7A85237F3986008153D9 /* IdWallDogAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		C5F4CFB7238A345800C63F26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CF902383852800C63F26 /* FeedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C5F4CFB8238A347200C63F26 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CF9523838E0600C63F26 /* CollectionDataSource.swift */,
+				C5F4CF9823838F2900C63F26 /* DogCollectionViewCell.xib */,
+				C5F4CF9723838F2900C63F26 /* DogCollectionViewCell.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		C5F4CFB9238A483300C63F26 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C5F4CFAD2387859D00C63F26 /* FeedTestApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C5F4CFBA238A483F00C63F26 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A6D237F3576008153D9 /* LoginApiTests.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C5F4CFBB238A48DC00C63F26 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C57F7A58237F3575008153D9 /* AppDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,7 +488,6 @@
 				C5F4CF932383852800C63F26 /* FeedViewController.xib in Resources */,
 				C57F7A63237F3576008153D9 /* LaunchScreen.storyboard in Resources */,
 				C57F7A60237F3576008153D9 /* Assets.xcassets in Resources */,
-				C57F7A5E237F3575008153D9 /* Main.storyboard in Resources */,
 				C5F4CF9A23838F2900C63F26 /* DogCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,14 +616,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C57F7A5C237F3575008153D9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C57F7A5D237F3575008153D9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C57F7A61237F3576008153D9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

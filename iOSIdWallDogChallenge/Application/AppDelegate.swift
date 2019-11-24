@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import IQKeyboardManager
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         root.navigationBar.isTranslucent = true
         window?.rootViewController = root
         window?.makeKeyAndVisible()
+        
+        IQKeyboardManager.shared().isEnabled = true
+        
         return true
     }
 

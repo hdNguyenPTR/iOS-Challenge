@@ -18,9 +18,9 @@ class FeedViewModelTest: XCTestCase {
             feed = response
         }
         
-        sut.getFeed(for: "husky")
+        sut.getFeed(for: Dog.husky.rawValue)
         
-        XCTAssertEqual(feed?.category, "husky")
+        XCTAssertEqual(feed?.category, Dog.husky.rawValue)
     }
     
     func testFeed_showError() {
@@ -31,7 +31,7 @@ class FeedViewModelTest: XCTestCase {
             serverError = error
         }
         
-        sut.getFeed(for: "husky")
+        sut.getFeed(for: Dog.husky.rawValue)
         
         XCTAssertEqual(serverError, ServiceError.serverError)
     }
@@ -44,10 +44,38 @@ class FeedViewModelTest: XCTestCase {
             isLoading = loading
         }
         
-        sut.getFeed(for: "husky")
+        sut.getFeed(for: Dog.husky.rawValue)
         
         
         XCTAssertFalse(isLoading ?? true)
+    }
+    
+    func testGetFeedForHoundBreed() {
+        let sut = makeSut(statusCode: 200)
+        var feed: Feed?
+        
+        sut.showFeed = { response in
+            feed = response
+        }
+        
+        sut.getFeed(for: Dog.hound.rawValue)
+        
+        
+        XCTAssertEqual(feed?.category, Dog.hound.rawValue)
+    }
+    
+    func testBackToLoginAfterUnauthorizedResponse() {
+        let sut = makeSut(statusCode: 401)
+        var backToLogin: Bool = false
+        
+        sut.backToLogin = {
+            backToLogin = true
+        }
+        
+        sut.getFeed(for: Dog.hound.rawValue)
+        
+        
+        XCTAssertTrue(backToLogin)
     }
     
     private func makeSut(statusCode: Int) -> FeedViewModel{
