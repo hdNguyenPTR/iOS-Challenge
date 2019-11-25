@@ -11,21 +11,21 @@ import XCTest
 
 class LoginViewModelTest: XCTestCase {
 
-    func testLoginToGoToFeed() {
+    func testLoginToGoToFeedAfterSignUp() {
         let sut = makeSut(statusCode: 200)
         var user: User?
+        let email = "jvlucas@g.com.br"
         
         sut.goToFeed = { userResponse in
             user = userResponse
         }
         
-        sut.login("jvlucas@g.com.br")
+        sut.login(email)
       
-        
-        XCTAssertEqual(user?.user.email, "jvlucas@g.com.br")
+        XCTAssertEqual(user?.user.email, email)
     }
     
-    func testLogin_showError() {
+    func testShowLoginError() {
         let sut = makeSut(statusCode: 500)
         var serverError: ServiceError?
         
@@ -51,7 +51,7 @@ class LoginViewModelTest: XCTestCase {
         XCTAssertFalse(isValidEmail)
     }
     
-    func testValidEmail() {
+    func testEmailInputValidation() {
         let sut = makeSut(statusCode: 200)
         
         let validEmail = sut.isValid("cc@m.com")

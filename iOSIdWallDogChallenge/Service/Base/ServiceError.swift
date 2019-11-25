@@ -8,12 +8,6 @@
 
 import Moya
 
-struct StatusCode {
-    let code: [Int: ServiceError] = [401: .unauthorized,
-                                    404: .notFound,
-                                    400: .unauthorized,
-                                    ]
-}
 public enum ServiceError: Swift.Error {
     case modelMapping
     case unexpected

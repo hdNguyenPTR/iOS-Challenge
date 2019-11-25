@@ -15,7 +15,7 @@ class FeedViewModel {
     var showError: ((ServiceError)->())?
     var isLoading: ((Bool)->())?
     var updateBreed: ((String)->())?
-    var backToLogin: (()->())?
+    var backToLogin: ((String, String)->())?
     
     init(service: FeedServiceProtocol) {
         self.service = service
@@ -31,7 +31,8 @@ class FeedViewModel {
                 self.showFeed?(feed)
             case .failure(let error):
                 if error == ServiceError.unauthorized {
-                    self.logout()
+                    self.logout(title: "Não autorizado",
+                                message: "Essa operação não foi autorizada.")
                 }
                 self.showError?(error)
             }
@@ -39,8 +40,8 @@ class FeedViewModel {
         }
     }
     
-    private func logout() {
+    func logout(title: String, message: String) {
         LocalStorage().remove(for: "token")
-        backToLogin?()
+        backToLogin?(title, message)
     }
 }

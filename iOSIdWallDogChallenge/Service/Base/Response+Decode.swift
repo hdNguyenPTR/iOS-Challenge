@@ -16,5 +16,4 @@ extension Moya.Response {
         let model = try decoder.decode(Item.self, from: self.data)
         return model
     }
-
 }

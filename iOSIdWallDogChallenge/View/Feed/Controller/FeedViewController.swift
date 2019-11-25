@@ -23,6 +23,7 @@ class FeedViewController: UIViewController {
     }
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet {
+           collectionView.layer.cornerRadius = 8.0
             collectionView.register(DogCollectionViewCell.self)
             collectionView.delegate = self
         }
@@ -46,7 +47,8 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true,
+                                                          animated: false)
         
         bind()
     }
@@ -58,7 +60,8 @@ class FeedViewController: UIViewController {
             self.configureCollection(items: feed.list)
         }
         
-        viewModel.isLoading = { [unowned self] loading in
+        viewModel.isLoading = { [weak self] loading in
+            guard let self = self else { return }
             if loading {
                 self.showSpinner(onView: self.view)
             }else {
@@ -66,12 +69,15 @@ class FeedViewController: UIViewController {
             }
         }
         
-        viewModel.updateBreed = { [unowned self] breed in
-            self.updateBreedLabel(breed)
+        viewModel.updateBreed = { [weak self] breed in
+            self?.updateBreedLabel(breed)
         }
         
-        viewModel.backToLogin = {
-            self.navigationController?.popViewController(animated: true)
+        viewModel.backToLogin = { [weak self] title, message in
+            self?.showAlert(alertText: title,
+                           alertMessage: message, handler: {
+                           self?.navigationController?.popViewController(animated: true)
+            })
         }
     }
     
@@ -97,6 +103,11 @@ class FeedViewController: UIViewController {
     
     @IBAction func didTapHusky(_ sender: Any) {
         viewModel.getFeed(for: Dog.husky.rawValue)
+    }
+    
+    @IBAction func didTapLogout(_ sender: Any) {
+        viewModel.logout(title: "Logout",
+                         message: "Você será deslogado!")
     }
 }
 

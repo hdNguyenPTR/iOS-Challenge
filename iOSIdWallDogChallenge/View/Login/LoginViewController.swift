@@ -47,24 +47,31 @@ class LoginViewController: UIViewController {
         bind()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        resetLoginTextField()
+    }
+    
     private func bind() {
-        viewModel.goToFeed = { [unowned self] user in
-            self.navigationController?.pushViewController(
+        viewModel.goToFeed = { [weak self] user in
+            self?.navigationController?.pushViewController(
                 FeedViewController(viewModel: FeedViewModel(service: FeedService())),
                                                           animated: true)
         }
         
-        viewModel.invalidEmailError = { [unowned self] in
-            self.showAlert(alertText: "Email inválido",
+        viewModel.invalidEmailError = { [weak self] in
+            self?.showAlert(alertText: "Email inválido",
                            alertMessage: "Digite um email válido")
         }
         
-        viewModel.showError = { [unowned self] serviceError in
-            self.showAlert(alertText: "Ocorreu algum erro, tente novamente",
+        viewModel.showError = { [weak self] serviceError in
+            self?.showAlert(alertText: "Ocorreu algum erro, tente novamente",
                            alertMessage: serviceError.localizedDescription)
         }
         
-        viewModel.isLoading = { [unowned self] isLoading in
+        viewModel.isLoading = { [weak self] isLoading in
+            guard let self = self else { return }
             if isLoading {
                 self.showSpinner(onView: self.view)
             }else {
@@ -75,6 +82,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func didTapLogin(_ sender: Any) {
         viewModel.login(loginTextField.text)
+    }
+    
+    private func resetLoginTextField() {
+        loginTextField.text = nil
     }
 }
 

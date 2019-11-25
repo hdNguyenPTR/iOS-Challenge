@@ -13,7 +13,7 @@ import XCTest
 class LoginApiTests: XCTestCase {
     var serviceError: ServiceError?
     
-    func testLogin_response200() {
+    func testLoginResponse200() {
         let sut = makeSUT(code: 200)
         var user: User?
         
@@ -29,7 +29,7 @@ class LoginApiTests: XCTestCase {
         XCTAssertEqual(user!.user.email, "jv@gmail.com")
     }
     
-    func testLogin_response401() {
+    func testLoginResponse401() {
         let sut = makeSUT(code: 401)
         
         sut.signup("jv@gmail.com") { response in
@@ -43,7 +43,7 @@ class LoginApiTests: XCTestCase {
         XCTAssertEqual(serviceError, .unauthorized)
     }
     
-    func testLogin_responseNoInternetConnection() {
+    func testLoginResponseNoInternetConnection() {
         let sut = makeSUT(code: NSURLErrorNotConnectedToInternet)
         
         sut.signup("jv@gmail.com") { response in
@@ -57,7 +57,7 @@ class LoginApiTests: XCTestCase {
         XCTAssertEqual(serviceError, .notConnectedToInternet)
     }
     
-    func testLogin_response404() {
+    func testLoginResponse404() {
         let sut = makeSUT(code: 404)
         
         sut.signup("jv@gmail.com") { response in
@@ -69,6 +69,34 @@ class LoginApiTests: XCTestCase {
         }
         
         XCTAssertEqual(serviceError, .notFound)
+    }
+    
+    func testLoginResponse500() {
+        let sut = makeSUT(code: 500)
+        
+        sut.signup("jv@gmail.com") { response in
+            switch response {
+            case .success(_ ): break
+            case .failure(let error):
+                self.serviceError = error
+            }
+        }
+        
+        XCTAssertEqual(serviceError, .serverError)
+    }
+    
+    func testLoginResponseUnexpected() {
+        let sut = makeSUT(code: 100)
+        
+        sut.signup("jv@gmail.com") { response in
+            switch response {
+            case .success(_ ): break
+            case .failure(let error):
+                self.serviceError = error
+            }
+        }
+        
+        XCTAssertEqual(serviceError, .unexpected)
     }
     
     func makeSUT(code: Int, email: String = "jv@gmail.com")-> LoginServiceSpy{

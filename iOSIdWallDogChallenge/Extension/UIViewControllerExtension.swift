@@ -36,10 +36,13 @@ extension UIViewController {
 
 extension UIViewController {
 
-    func showAlert(alertText: String, alertMessage : String) {
+    func showAlert(alertText: String, alertMessage : String, handler: (()->())? = nil) {
         let alert = UIAlertController(title: alertText,
                                       message: alertMessage, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            guard let completion = handler else { return }
+            completion()
+        }))
       
         self.present(alert, animated: true, completion: nil)
     }
